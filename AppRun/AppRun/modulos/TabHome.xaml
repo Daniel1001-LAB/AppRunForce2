@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="AppRun.TabHome"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             SelectedTabColor="Black"
+             BackgroundColor="White"
+             BarTextColor="Black"
+             Visual="Material"
+             
+             UnselectedTabColor="OrangeRed"
+             BarBackgroundColor="White"
+             x:Name="tabpage"
+             Title="TabHome">
+
+
+</TabbedPage >

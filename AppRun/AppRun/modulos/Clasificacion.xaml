@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRun.Clasificacion"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Title="Clasificaciones">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout 
+                        Orientation="Horizontal"
+                        VerticalOptions="Start"
+                        Padding="10"
+                        x:Name="searchLayout">
+                <yummy:PancakeView x:Name="multiGradient" HorizontalOptions="FillAndExpand" HeightRequest="150"
+                               CornerRadius="10" BackgroundGradientStops="{Binding BackgroundGradientStops}"
+                               BackgroundGradientStartPoint="{Binding BackgroundGradientStartPoint2}"
+                               BackgroundGradientEndPoint="{Binding BackgroundGradientEndPoint2}">
+                    <Label Text="Let's get crazy." TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" />
+                </yummy:PancakeView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

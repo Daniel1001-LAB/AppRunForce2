@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRun.Settings"
+             Title="Settings">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame HasShadow="False" Margin="20" CornerRadius="10">
+                    <Grid>
+                        <StackLayout Orientation="Vertical">
+                            <Label IsVisible="false" x:Name="idusuario">
+
+                            </Label>
+                            <Frame  HeightRequest="{OnPlatform iOS=130,Android=130}"
+                                WidthRequest="{OnPlatform iOS=130,Android=130}" Padding="0" HorizontalOptions="CenterAndExpand" IsClippedToBounds="True" CornerRadius="100">
+                                <Image   HeightRequest="{OnPlatform iOS=130,Android=130}"
+                                WidthRequest="{OnPlatform iOS=130,Android=130}" Source="{Binding PerfilRest, Mode=TwoWay}" Visual="Material" HorizontalOptions="CenterAndExpand"  x:Name="perfil">
+
+                                </Image>
+                            </Frame>
+
+
+                            <Label TextColor="black" x:Name="nombre"  Text="{Binding NombrePreferencias, Mode=TwoWay}"  Margin="10"  FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center">
+
+                            </Label>
+                            <Label TextColor="black" x:Name="correo" Text="{Binding EmailPreferencias, Mode=TwoWay}" FontSize="14" HorizontalTextAlignment="Center">
+
+                            </Label>
+
+                            <StackLayout  HeightRequest="50" VerticalOptions="CenterAndExpand" Orientation="Horizontal"  x:Name="updateProfile"  Margin="10"  HorizontalOptions="CenterAndExpand">
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="resetFoto_Clicked">
+
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+
+
+                                <StackLayout Margin="10" Orientation="Horizontal">
+                                    <Label TextColor="OrangeRed" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Bold"  Text="Editar Perfil">
+
+                                    </Label>
+                                    <Label FontAttributes="Bold" TextColor="black" Text="&#xe5cc;" FontSize="30" FontFamily="Material/Sharp">
+
+                                    </Label>
+                                </StackLayout>
+
+
+
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Frame>
+                <Frame HasShadow="False"  VerticalOptions="CenterAndExpand"  Margin="20,0,20,10" CornerRadius="10">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1">
+
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                        <Label VerticalOptions="CenterAndExpand" TextColor="black" FontAttributes="Bold" HorizontalOptions="FillAndExpand" Text="Cambiar nombre">
+
+                        </Label>
+                        <Label  Text="&#xe5cc;" FontSize="30" FontFamily="Material/Sharp" TextColor="black"></Label>
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="False"  Margin="20,10,20,0"  CornerRadius="10">
+                    <Grid>
+                        <StackLayout  Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <Label HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="black"  FontAttributes="Bold" Text="Cambiar correo electrónico">
+
+                            </Label>
+                            <Label Text="&#xe5cc;" FontSize="30" FontFamily="Material/Sharp" TextColor="black"></Label>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Frame>
+
+                <Frame HasShadow="False" VerticalOptions="CenterAndExpand"  Margin="20,10,20,10" CornerRadius="10">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="resetPassword" Tapped="resetPassword_Tapped">
+
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                        <Label VerticalOptions="FillAndExpand" TextColor="Black"   FontAttributes="Bold" HorizontalOptions="StartAndExpand" Text="Cambiar contraseña">
+
+                        </Label>
+                        <Label Text="&#xe5cc;" FontSize="30" FontFamily="Material/Sharp" TextColor="black"></Label>
+
+                    </StackLayout>
+                </Frame>
+               
+                <Frame HasShadow="False" VerticalOptions="CenterAndExpand"  Margin="20,10,20,10" CornerRadius="10">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="politica" Tapped="TapGestureRecognizer_Poli" >
+
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                        <Label HorizontalOptions="StartAndExpand"  TextColor="Black"    FontAttributes="Bold" Text="Información">
+
+                        </Label>
+                        <Label Text="&#xe5cc;" FontSize="30" FontFamily="Material/Sharp" TextColor="black"></Label>
+
+                    </StackLayout>
+                </Frame>
+                
+                <Frame HasShadow="False" VerticalOptions="CenterAndExpand"  Margin="20,10,20,10" CornerRadius="10">
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="cerrar_Clicked" >
+
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                        <Label x:Name="Cerrar"  FontAttributes="Bold" BackgroundColor="White" TextColor="OrangeRed"  HorizontalOptions="CenterAndExpand" Visual="Material" Text="Cerrar Sesion" >
+
+                        </Label>
+
+
+                    </StackLayout>
+
+
+
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
